@@ -1,0 +1,16 @@
+.nav-link{
+    color: black;
+}
+.nav{
+    background-color: transparent;
+}
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-color:#3e64ff;
+    /* background-image: url('./images/header.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
