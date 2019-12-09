@@ -1,8 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* .navbar{
+    background-color: aqua;
+} */
 .nav-link{
-    color: black;
+    color: #3e64ff;
 }
 .nav{
-    background-color: transparent;
+    /* background-color: white; */
+    font-size: 1.25em;
+
 }
 .masthead {
     height: 100vh;
