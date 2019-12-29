@@ -71,24 +71,24 @@
     </header>
     <div class="container">
       <div class="row d-flex justify-content-around mt-5">
-        <div class="text-center">
+        <div class="text-center col-sm-3">
           <img src="./images/rising.png" alt=""/>
           <h3 class="mt-3">94%</h3>
           <p>KEPUASAN PENGUNJUNG</p>
         </div>
-        <div class="text-center">
+        <div class="text-center col-sm-3">
           <img src="./images/completed-task.png" alt="">
-          <h3 class="mt-3">268</h3>
+          <h3 class="mt-3">1023</h3>
           <p>JUMLAH TES</p>
         </div>
-        <div class="text-center">
+        <div class="text-center col-sm-3">
           <img src="./images/telemarketer.png" alt="">
-          <h3 class="mt-3">38</h3>
+          <h3 class="mt-3">141</h3>
           <p>MITRA KONSULTAN</p>
         </div>
-        <div class="text-center">
+        <div class="text-center col-sm-3">
           <img src="./images/boy (1).png" alt="">
-          <h3 class="mt-3">173</h3>
+          <h3 class="mt-3">612</h3>
           <p>PENGGUNA TERDAFTAR</p>
         </div>  
       </div>
@@ -288,5 +288,18 @@
       </div>
     </div>
 </body>
+<script>
+  $('.mt-3').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>
 
 </html>
