@@ -24,6 +24,7 @@
 </head>
 
 <body>
+  <!-- Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top" width="100%">
     <a class="navbar-brand" href="#">
       <img src="./images/logo_wation.png" height="40" alt="">
@@ -50,25 +51,27 @@
     </div>
   </nav>
   </div>
-    <header class="masthead">
-      <div class="container-fluid h-100">
-        <div class="row h-100 align-items-center">    
-          <div class="col-md-4">
-            <div class="text-center">
-              <img src="./images/logo_wation.png" class="justify-content-start mb-5 img-banner" alt="">
-              <p align="left" class="lead  text-white text-banner">
-                WATION adalah sebuah aplikasi web yang dapat membantu peserta didik untuk mengetahui program studi pada jenjang perkuliahan yang sesuai dengan minat dan bakatnya.</br>
-              </p>
-              <a href="test1.html"><div class="btn btn-success badge-pill mt-4">Cari Tahu Sekarang !</div></a>
-            </div>
-          </div>
-          <div class="col-md-8 p-0">
-            <img src="./images/header.jpg" style="width:100%; border-radius: 500px 0 0 500px;"alt="">
-          </div>
+  <!-- Banner -->
+  <header class="masthead">
+    <div class="container-fluid h-100">
+      <div class="row h-100 align-items-center">    
+        <div class="col-md-4">
+          <div class="text-center">
+            <img src="./images/logo_wation.png" class="justify-content-start mb-5 img-banner" alt="">
+            <p align="left" class="lead  text-white text-banner">
+              WATION adalah sebuah aplikasi web yang dapat membantu peserta didik untuk mengetahui program studi pada jenjang perkuliahan yang sesuai dengan minat dan bakatnya.</br>
+            </p>
+            <a href="test1.html"><div class="btn btn-success badge-pill mt-4">Cari Tahu Sekarang !</div></a>
           </div>
         </div>
+        <div class="col-md-8 p-0">
+          <img src="./images/header.jpg" style="width:100%; border-radius: 500px 0 0 500px;"alt="">
+        </div>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
+    <!-- Info App -->
     <div class="container">
       <div class="row d-flex justify-content-around mt-5">
         <div class="text-center col-sm-3">
@@ -93,13 +96,14 @@
         </div>  
       </div>
     </div>
-        
+    <!-- Penjelasan -->
     <section class="py-5">
       <div class="container">
         <h2 class="font-weight-light">APA ITU <b>WATION?</b></h2>
         <h5>WATION adalah sebuah aplikasi web yang dapat membanti peserta didik untuk mengetahui program studi pada jenjang perkuliahan yang sesuai dengan minat dan bakatnya</h5>
       </div>
     </section>
+    <!-- Testimoni Slider -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">			
@@ -287,13 +291,41 @@
         </div>
       </div>
     </div>
+  <div id="footer-co">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- <div class="col-md-7">
+          <h1 class="font-weight-light mt-4 text-white">Sticky Footer using Flexbox</h1>
+          <p class="lead text-white-50">Use just two Bootstrap 4 utility classes and three custom CSS rules and you will have a flexbox enabled sticky footer for your website!</p>
+        </div> -->
+        <div class="col-md-4">
+            <h1 class="font-weight-light mt-4 text-white">WATION Inc.</h1>
+            <a class="a-footer" href="#"><h5>Materi</h5></a>
+            <a class="a-footer" href="#"><h5>Tentang Kami</h5></a>
+            <a class="a-footer" href="#"><h5>Profil</h5></a>
+        </div>
+        <div class="col-md-4">
+            <h1 class="font-weight-light mt-4 text-white">Layanan</h1>
+        </div>
+        <div class="col-md-4">
+            <h1 class="font-weight-light mt-4 text-white">Aplikasi</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; WATION Inc.</small>
+    </div>
+  </footer>  
 </body>
+<!-- JavaScript CountUp -->
 <script>
   $('.mt-3').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {
-        duration: 5000,
+        duration: 2500,
         easing: 'swing',
         step: function (now) {
             $(this).text(Math.ceil(now));

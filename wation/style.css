@@ -3,7 +3,7 @@
     padding:0;
 }
 body {
-	font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 h2 {
 	color: #000;
@@ -182,4 +182,21 @@ a:hover{
     font-size: 1.25rem;
     padding-left: 3em;
     font-weight: 350;
+}
+#footer-co {
+    margin-top: 50px;
+    flex: 1 0 auto;
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+  
+#sticky-footer {
+    flex-shrink: none;
+}
+.a-footer{
+    color:black;
+}
+.a-footer:hover{
+    text-decoration: underline;
+    color:black;
 }

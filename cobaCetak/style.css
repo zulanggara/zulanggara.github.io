@@ -1,0 +1,38 @@
+@media print {
+    @page {size: A4 landscape}
+    body * {
+        visibility: hidden;
+    }
+    #section-to-print, #section-to-print * {
+        visibility: visible;
+    }
+    #section-to-print {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+/* @page :blank {
+    @top-center { content: none }
+} */
+*{
+    /* padding: 0; */
+    /* border: 0; */
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 12px; */
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: auto;
+}
+td{
+    padding: 4px;
+    vertical-align: top;
+}
+tr td.angka{
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    /* align-content: center; */
+}
