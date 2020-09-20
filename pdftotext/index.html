@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://raw.githubusercontent.com/hubgit/hubgit.github.io/master/2011/11/pdftotext/pdf.js"></script>
+	<script>
+
+		function pdfToPlainText(pdfData) {
+			PDFJS.disableWorker = true;
+			var pdf = PDFJS.getDocument(pdfData);
+			pdf.then(getPages);
+		}
+
+		function getPages(pdf) {
+			for (var i = 0; i < pdf.numPages; i++) {
+				pdf.getPage(i + 1).then(getPageText);
+			}
+		}
+
+		function getPageText(page) {
+			page.getTextContent().then(function(textContent) {
+				textContent.forEach(function(o) {
+					$("#pdf").append(o.str + '</br>');
+				});
+			});
+		}
+
+	</script>
+</head>
+<body onload="pdfToPlainText('FMIPA-PKM-PSH-18303244019-422.pdf')">
+	<h1>Plain Text PDF with pdf.js</h1>
+	</br>
+	<div id="pdf"></div>
+</body>
+</html>
+<!-- <script src=""></script> -->
