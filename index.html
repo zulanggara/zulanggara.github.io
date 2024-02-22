@@ -1,104 +1,73 @@
-<html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="button">
-            <button onclick="printTable()">Print</button>
-            <button onclick="exportTableToExcel('tblData')" id="getExcel">Get Excel</button>
-        </div>
-        <br><br>
-        <div class="table-print" id="section-to-print">
-            <table border="1" class="tblData" id="tblData">
-                <thead>
-                    <tr>
-                        <th>Tanggal</th>
-                        <th>Pembelian</th>
-                        <th>Kategori</th>
-                        <th>Toko</th>
-                        <th>Volume</th>
-                        <th>Harga Satuan</th>
-                        <th>Jumlah</th>
-                        <th>PPn</th>
-                        <th>PPh21</th>
-                        <th>PPh22</th>
-                        <th>PPh23</th>
-                        <th>PPh26</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2020-02-19</td>
-                        <td>Zul Anggara</td>
-                        <td>Pembelian Bahan Produksi Kegiatan</td>
-                        <td>Ayam Segar Munif</td>
-                        <td class="angka">16</td>
-                        <td>100.000</td>
-                        <td>1.600.000</td>
-                        <td class="angka">-</td>
-                        <td>7.455</td>
-                        <td class="angka">-</td>
-                        <td class="angka">-</td>
-                        <td class="angka">-</td>
-                    </tr>
-                    <tr>
-                        <td>2020-02-19</td>
-                        <td>Muhammad Dzulfiqar Amien</td>
-                        <td>Pengeluaran Biaya Berlangganan (Listrik/Internet Bulanan)</td>
-                        <td>Team Project</td>
-                        <td  class="angka">1</td>
-                        <td>1.500.000</td>
-                        <td>1.500.000</td>
-                        <td>13.432</td>
-                        <td  class="angka">-</td>
-                        <td  class="angka">-</td>
-                        <td  class="angka">-</td>
-                        <td  class="angka">-</td>
-                    </tr>
-                    <tr>
-                        <td>2020-02-19</td>
-                        <td>xxxxxxxxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx xxxxxxxxxxxxx xxxxx xxxxxxxxx xxxx xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td  class="angka">x</td>
-                        <td>xxxxxx</td>
-                        <td>xxxxxxx</td>
-                        <td>20.000</td>
-                        <td  class="angka">-</td>
-                        <td  class="angka">-</td>
-                        <td  class="angka">-</td>
-                        <td>8.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preloader</title>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.loading-bar:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+</style>
+</head>
+<body>
+<div class="preloader">
+  <div class="loading-bar"></div>
+  <p>Redirecting to Zul Anggara's portfolio...</p>
+</div>
     <script>
-        function exportTableToExcel(tableID, filename = ''){
-            var downloadLink;
-            var dataType = 'application/vnd.ms-excel';
-            var tableSelect = document.getElementById(tableID);
-            var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-            
-            filename = filename?filename+'.xls':'Laporan Keuangan.xls';
-            downloadLink = document.createElement("a");
-            document.body.appendChild(downloadLink);
-            
-            if(navigator.msSaveOrOpenBlob){
-                var blob = new Blob(['\ufeff', tableHTML], {
-                    type: dataType
-                });
-                navigator.msSaveOrOpenBlob( blob, filename);
-            }else{
-                downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-                downloadLink.download = filename;
-                downloadLink.click();
-            }
-        }
-        function printTable(){
-            window.print();
-        }
+        window.onload = function() {
+    // After the page has loaded, set a timeout for the redirect
+    setTimeout(function() {
+        // Redirect to the desired URL
+        window.location.href = "https://akundrivezul.wixsite.com/situs-portofolio";
+    }, 3000); // 3000 milliseconds = 3 seconds (you can adjust this value as needed)
+};
+
     </script>
+</body>
 </html>
