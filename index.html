@@ -222,6 +222,21 @@ section{ padding:88px 0; border-top:1px solid var(--border); }
 .contact-box h2{ font-size:clamp(1.8rem,4vw,2.6rem); }
 .contact-links{ display:flex; justify-content:center; gap:16px; margin-top:32px; flex-wrap:wrap; }
 
+.downloads{ margin-top:36px; padding-top:32px; border-top:1px dashed var(--border); }
+.downloads-label{
+  display:block; text-transform:uppercase; letter-spacing:.14em; font-size:.72rem;
+  color:var(--muted); margin-bottom:14px;
+}
+.downloads-links{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.dl-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:.82rem; font-weight:700;
+  padding:9px 16px; border-radius:999px; border:1px solid var(--accent-3);
+  color:var(--accent-3); text-decoration:none; background:transparent;
+  transition:background .15s ease, color .15s ease;
+}
+.dl-btn:hover{ background:var(--accent-3); color:var(--bg); }
+
 footer{ border-top:1px solid var(--border); padding:32px 0; }
 .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; color:var(--muted); font-size:.82rem; }
 
@@ -230,6 +245,20 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
   .about-grid{ grid-template-columns:1fr; }
   .proj-grid{ grid-template-columns:1fr; }
   .nav-links{ display:none; }
+}
+
+@media print{
+  body{ background:#fff !important; background-image:none !important; color:#1a1a1a; }
+  .reveal{ opacity:1 !important; transform:none !important; transition:none !important; }
+  header, .icon-btn, .hero-cta a[href="#downloads"], .downloads, footer .footer-row span:last-child{ display:none !important; }
+  a{ color:#1a1a1a; text-decoration:none; }
+  .term{ animation:none; box-shadow:none; }
+  section{ padding:28px 0; border-top:1px solid #ddd; }
+  .proj-card, .contact-box, .term, .skill-chips .tag, .tag{ background:#f4f4f4 !important; border-color:#ccc !important; }
+  .proj-card::before{ color:#eee !important; }
+  .btn{ border-color:#1a1a1a; color:#1a1a1a; }
+  .btn.primary{ background:#1a1a1a; color:#fff; }
+  .hero{ padding-top:20px; }
 }
 </style>
 </head>
@@ -266,6 +295,7 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
         <p class="lead" data-i18n="hero.lead">Membangun dan memelihara layanan backend untuk transaksi, integrasi vendor, dan migrasi sistem lama ke teknologi baru — bekerja dengan PHP, Go, dan Node.js di atas MySQL, Redis, dan Elasticsearch pada Kubernetes.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn primary" data-i18n="hero.cta1">Lihat Proyek</a>
+          <a href="#downloads" class="btn" data-i18n="hero.cta3">⬇ Unduh CV / Portofolio</a>
           <a href="#contact" class="btn" data-i18n="hero.cta2">Hubungi Saya</a>
         </div>
         <div class="stats">
@@ -364,7 +394,7 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       <div class="skill-group reveal">
         <h4 data-i18n="skills.cat.domain">Domain &amp; Spesialisasi</h4>
         <div class="skill-chips">
-          <span class="tag">Payment Systems</span><span class="tag">QRIS / MPM</span><span class="tag">Disbursement / Payout</span><span class="tag">Rekonsiliasi Transaksi</span><span class="tag">Deteksi Fraud</span><span class="tag">Keamanan API</span><span class="tag">Microservices</span>
+          <span class="tag">Payment Systems</span><span class="tag">QRIS / MPM</span><span class="tag">Disbursement / Payout</span><span class="tag" data-i18n="skills.tag.reconciliation">Rekonsiliasi Transaksi</span><span class="tag" data-i18n="skills.tag.fraud">Deteksi Fraud</span><span class="tag" data-i18n="skills.tag.apisec">Keamanan API</span><span class="tag">Microservices</span>
         </div>
       </div>
     </div>
@@ -495,6 +525,24 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
           <a class="btn" href="https://github.com/zulanggara" target="_blank" rel="noopener">github.com/zulanggara</a>
           <a class="btn" href="https://www.instagram.com/__zulang/" target="_blank" rel="noopener">@__zulang</a>
         </div>
+
+        <div class="downloads" id="downloads">
+          <span class="downloads-label" data-i18n="downloads.label">Unduh dokumen</span>
+          <div class="downloads-links">
+            <a class="dl-btn" href="assets/cv-zul-anggara-en.pdf" download>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+              <span data-i18n="downloads.cv_en">Resume (English)</span>
+            </a>
+            <a class="dl-btn" href="assets/cv-zul-anggara-id.pdf" download>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+              <span data-i18n="downloads.cv_id">CV (Bahasa Indonesia)</span>
+            </a>
+            <a class="dl-btn" href="assets/portfolio-zul-anggara.pdf" download>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 19h16"/></svg>
+              <span data-i18n="downloads.portfolio">Portofolio Lengkap (PDF)</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -537,7 +585,7 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       "hero.role":"Backend Developer",
       "hero.rolesub":"Fintech &amp; Payment Systems",
       "hero.lead":"Building and maintaining backend services for transaction processing, vendor integration, and legacy-system migration — working across PHP, Go, and Node.js with MySQL, Redis, and Elasticsearch on Kubernetes.",
-      "hero.cta1":"View Projects","hero.cta2":"Get in Touch",
+      "hero.cta1":"View Projects","hero.cta2":"Get in Touch","hero.cta3":"⬇ Download CV / Portfolio",
       "hero.stat1":"Years of experience","hero.stat2":"Systems &amp; projects shipped","hero.stat3":"Core languages",
       "about.label":"About Me",
       "about.title":"A backend developer focused on payment systems.",
@@ -554,6 +602,9 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       "skills.cat.db":"Databases &amp; Storage",
       "skills.cat.infra":"Infrastructure &amp; Tools",
       "skills.cat.domain":"Domain &amp; Specialisation",
+      "skills.tag.reconciliation":"Transaction Reconciliation",
+      "skills.tag.fraud":"Fraud Detection",
+      "skills.tag.apisec":"API Security",
       "exp.label":"Work Experience","exp.title":"Professional journey",
       "exp.job1.period":"Jul 2024 — Present","exp.job1.role":"Backend Developer",
       "exp.job1.desc":"Bank Indonesia–licensed Payment Service Provider (PJP Category 1): electronic money, fund transfer, QRIS. Work on core payment services across the merchant platform, mobile app, and admin dashboard.",
@@ -579,6 +630,10 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       "proj.simaha.desc":"Campus platforms for student fund/letter requests and creativity-program (PKM) proposal management, review scoring, and reporting.",
       "proj.more.label":"Other Projects",
       "contact.label":"Contact","contact.title":"Have a project or idea? Let's talk.",
+      "downloads.label":"Download documents",
+      "downloads.cv_en":"Resume (English)",
+      "downloads.cv_id":"CV (Bahasa Indonesia)",
+      "downloads.portfolio":"Full Portfolio (PDF)",
       "contact.lead":"Open to collaboration, job opportunities, or just a chat about payment systems and backend development.",
       "footer.rights":"All rights reserved.","footer.built":"Built with plain HTML, CSS &amp; JS."
     },
