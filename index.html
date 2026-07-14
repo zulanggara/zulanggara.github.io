@@ -1,73 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preloader</title>
+<title>Zul Anggara — Backend &amp; Website Developer</title>
+<meta name="description" content="Zul Anggara, Backend &amp; Website Developer dari Yogyakarta. 3+ tahun membangun sistem informasi pemerintah &amp; layanan digital dengan PHP, Yii2, CodeIgniter, Laravel, dan MySQL.">
+<meta name="theme-color" content="#1d2021">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://zulanggara.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zul Anggara — Backend &amp; Website Developer">
+<meta property="og:description" content="Portofolio Zul Anggara: sistem informasi kinerja vokasi, kerja sama pendidikan, monitoring data, rekrutmen penguji, hingga platform tiket &amp; PPOB Ngabei.id.">
+<meta property="og:url" content="https://zulanggara.github.io/">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zul Anggara — Backend &amp; Website Developer">
+<meta name="twitter:description" content="3+ tahun membangun sistem informasi &amp; layanan digital dengan PHP, Yii2, CodeIgniter, Laravel, MySQL.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231d2021'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%23fe8019' text-anchor='middle'%3EZA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zul Anggara",
+  "url": "https://zulanggara.github.io/",
+  "jobTitle": "Backend & Website Developer",
+  "email": "mailto:zul.anggara8@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/zulanggara",
+    "https://www.instagram.com/__zulang/"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Negeri Yogyakarta"
+  },
+  "knowsAbout": ["PHP", "Yii2", "CodeIgniter", "Laravel", "Lumen", "MySQL", "Git"]
+}
+</script>
+
 <style>
-    body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+:root{
+  --bg:#1d2021; --bg-alt:#282828; --bg-raised:#32302f;
+  --fg:#ebdbb2; --muted:#a89984; --border:#3c3836;
+  --accent:#fe8019; --accent-2:#b8bb26; --accent-3:#83a598; --danger:#fb4934;
+  --font-display:"Bricolage Grotesque", sans-serif;
+  --font-mono:"JetBrains Mono", monospace;
+  color-scheme: dark;
+}
+:root[data-theme="light"]{
+  --bg:#fbf1c7; --bg-alt:#f2e5bc; --bg-raised:#ebe0b6;
+  --fg:#3c3836; --muted:#6f6152; --border:#d5c4a1;
+  --accent:#af3a03; --accent-2:#79740e; --accent-3:#076678; --danger:#9d0006;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#fbf1c7; --bg-alt:#f2e5bc; --bg-raised:#ebe0b6;
+    --fg:#3c3836; --muted:#6f6152; --border:#d5c4a1;
+    --accent:#af3a03; --accent-2:#79740e; --accent-3:#076678; --danger:#9d0006;
+    color-scheme: light;
+  }
 }
 
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:var(--font-mono); font-size:16px; line-height:1.6;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size:48px 48px;
+  background-attachment:fixed;
+  transition:background-color .3s ease, color .3s ease;
 }
-
-.loading-bar {
-    width: 200px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 10px;
+::selection{background:var(--accent); color:var(--bg);}
+a{color:inherit;}
+img{max-width:100%; display:block;}
+h1,h2,h3{font-family:var(--font-display); font-weight:800; letter-spacing:-0.02em; margin:0;}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+.tag{
+  display:inline-flex; align-items:center; gap:6px;
+  border:1px solid var(--border); border-radius:999px;
+  padding:6px 14px; font-size:.82rem; color:var(--muted);
+  background:var(--bg-alt);
 }
-
-.loading-bar:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-    background-color: #333;
-    border-radius: 10px;
-    animation: loading 3s linear infinite;
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-weight:700; font-size:.9rem;
+  padding:12px 22px; border-radius:8px; border:1.5px solid var(--fg);
+  text-decoration:none; cursor:pointer; background:transparent; color:var(--fg);
+  transition:transform .15s ease, background .15s ease, color .15s ease;
 }
-
-@keyframes loading {
-    0% { width: 0; }
-    100% { width: 100%; }
+.btn:hover{ transform:translateY(-2px); }
+.btn.primary{ background:var(--accent); border-color:var(--accent); color:var(--bg); }
+.btn.primary:hover{ background:var(--accent); filter:brightness(1.1); }
+.section-label{
+  font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.18em;
+  font-size:.75rem; color:var(--accent); margin-bottom:14px; display:flex; align-items:center; gap:10px;
 }
+.section-label::before{content:"//"; color:var(--muted);}
 
-p {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #333;
+/* ===== NAV ===== */
+header{
+  position:sticky; top:0; z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
 }
+nav.wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; }
+.logo{ font-family:var(--font-display); font-weight:800; font-size:1.2rem; text-decoration:none; color:var(--fg); }
+.logo span{ color:var(--accent); }
+.nav-links{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
+.nav-links a{ text-decoration:none; font-size:.88rem; color:var(--muted); }
+.nav-links a:hover{ color:var(--accent); }
+.nav-tools{ display:flex; align-items:center; gap:10px; }
+.icon-btn{
+  width:38px; height:38px; border-radius:8px; border:1px solid var(--border);
+  background:var(--bg-alt); color:var(--fg); cursor:pointer;
+  display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:.78rem; font-weight:700;
+}
+.icon-btn:hover{ border-color:var(--accent); color:var(--accent); }
+.burger{ display:none; }
 
+/* ===== HERO ===== */
+.hero{ padding:96px 0 72px; }
+.hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+.hero h1{ font-size:clamp(2.4rem, 5vw, 4rem); line-height:1.05; margin:18px 0; }
+.hero h1 .accent{ color:var(--accent); }
+.hero p.lead{ color:var(--muted); font-size:1.05rem; max-width:52ch; }
+.hero-cta{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
+.stats{ display:flex; gap:32px; margin-top:48px; flex-wrap:wrap; }
+.stat b{ font-family:var(--font-display); font-size:1.8rem; display:block; color:var(--accent); }
+.stat span{ color:var(--muted); font-size:.8rem; }
+
+.term{
+  border:1px solid var(--border); border-radius:12px; overflow:hidden;
+  background:var(--bg-alt); box-shadow:0 30px 60px -30px rgba(0,0,0,.5);
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+.term-bar{ display:flex; gap:7px; padding:12px 14px; background:var(--bg-raised); border-bottom:1px solid var(--border);}
+.term-dot{ width:11px; height:11px; border-radius:50%; }
+.term pre{ margin:0; padding:22px; font-size:.85rem; overflow-x:auto; line-height:1.7; }
+.term .c1{ color:var(--accent-3); } .term .c2{ color:var(--accent-2); } .term .c3{ color:var(--accent); } .term .c4{ color:var(--muted); }
+.type::after{ content:"▌"; animation:blink 1s step-end infinite; color:var(--accent); }
+@keyframes blink{ 50%{opacity:0;} }
+
+/* ===== reveal on scroll ===== */
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+.reveal.in:nth-child(1){transition-delay:.05s;}
+.reveal.in:nth-child(2){transition-delay:.12s;}
+.reveal.in:nth-child(3){transition-delay:.19s;}
+.reveal.in:nth-child(4){transition-delay:.26s;}
+.reveal.in:nth-child(5){transition-delay:.33s;}
+
+section{ padding:88px 0; border-top:1px solid var(--border); }
+
+/* ===== ABOUT ===== */
+.about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+.about-grid p{ color:var(--muted); margin:0 0 16px; }
+.timeline{ border-left:2px solid var(--border); padding-left:24px; display:flex; flex-direction:column; gap:26px; }
+.timeline .item{ position:relative; }
+.timeline .item::before{
+  content:""; position:absolute; left:-30px; top:4px; width:11px; height:11px; border-radius:50%;
+  background:var(--accent); box-shadow:0 0 0 4px var(--bg-alt);
+}
+.timeline .role{ font-family:var(--font-display); font-weight:700; font-size:1rem; }
+.timeline .org{ color:var(--accent-3); font-size:.85rem; }
+.timeline .period{ color:var(--muted); font-size:.78rem; margin-bottom:4px; }
+
+/* ===== SKILLS ===== */
+.skills-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:14px; }
+.skill-card{
+  border:1px solid var(--border); border-radius:10px; padding:18px 16px; background:var(--bg-alt);
+  transition:transform .2s ease, border-color .2s ease;
+}
+.skill-card:hover{ transform:translateY(-4px); border-color:var(--accent); }
+.skill-card .name{ font-family:var(--font-display); font-weight:700; }
+.skill-card .lvl{ display:flex; gap:4px; margin-top:10px; }
+.skill-card .lvl i{ height:5px; flex:1; border-radius:2px; background:var(--border); }
+.skill-card .lvl i.on{ background:var(--accent); }
+
+/* ===== PROJECTS ===== */
+.proj-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:22px; }
+.proj-card{
+  border:1px solid var(--border); border-radius:14px; background:var(--bg-alt);
+  padding:26px; display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden;
+}
+.proj-card::before{
+  content:attr(data-idx); position:absolute; top:-18px; right:-6px; font-family:var(--font-display);
+  font-size:5.5rem; font-weight:800; color:var(--bg-raised); z-index:0; line-height:1;
+}
+.proj-card > *{ position:relative; z-index:1; }
+.proj-card h3{ font-size:1.25rem; }
+.proj-card .desc{ color:var(--muted); font-size:.9rem; flex:1; }
+.proj-tags{ display:flex; gap:8px; flex-wrap:wrap; }
+.proj-tags span{ font-size:.72rem; border:1px solid var(--border); border-radius:6px; padding:3px 8px; color:var(--accent-3); }
+.more-projects{ margin-top:36px; display:flex; flex-wrap:wrap; gap:10px; }
+
+/* ===== CONTACT ===== */
+.contact-box{
+  border:1px solid var(--border); border-radius:16px; padding:56px; text-align:center;
+  background:var(--bg-alt); position:relative; overflow:hidden;
+}
+.contact-box h2{ font-size:clamp(1.8rem,4vw,2.6rem); }
+.contact-links{ display:flex; justify-content:center; gap:16px; margin-top:32px; flex-wrap:wrap; }
+
+footer{ border-top:1px solid var(--border); padding:32px 0; }
+.footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; color:var(--muted); font-size:.82rem; }
+
+@media (max-width:820px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .about-grid{ grid-template-columns:1fr; }
+  .proj-grid{ grid-template-columns:1fr; }
+  .nav-links{ display:none; }
+}
 </style>
 </head>
 <body>
-<div class="preloader">
-  <div class="loading-bar"></div>
-  <p>Redirecting to Zul Anggara's portfolio...</p>
-</div>
-    <script>
-        window.onload = function() {
-    // After the page has loaded, set a timeout for the redirect
-    setTimeout(function() {
-        // Redirect to the desired URL
-        window.location.href = "https://akundrivezul.wixsite.com/situs-portofolio";
-    }, 3000); // 3000 milliseconds = 3 seconds (you can adjust this value as needed)
-};
 
-    </script>
+<header>
+  <nav class="wrap">
+    <a href="#home" class="logo">zul<span>anggara</span>_</a>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button class="icon-btn" id="langToggle" title="Switch language" aria-label="Switch language">ID</button>
+      <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme"></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home" style="border-top:none; padding-top:64px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">● <span data-i18n="hero.badge">Tersedia untuk proyek baru</span></span>
+        <h1>
+          <span data-i18n="hero.hi">Halo, saya</span> Zul Anggara<br>
+          <span class="accent" data-i18n="hero.role">Backend &amp; Website Developer</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">Membangun sistem informasi dan layanan digital yang stabil selama 3+ tahun — dari sistem kinerja institusi pendidikan vokasi hingga platform tiket &amp; PPOB.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn primary" data-i18n="hero.cta1">Lihat Proyek</a>
+          <a href="#contact" class="btn" data-i18n="hero.cta2">Hubungi Saya</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>3+</b><span data-i18n="hero.stat1">Tahun pengalaman</span></div>
+          <div class="stat"><b>10+</b><span data-i18n="hero.stat2">Sistem dirilis</span></div>
+          <div class="stat"><b>5</b><span data-i18n="hero.stat3">Framework &amp; tools inti</span></div>
+        </div>
+      </div>
+      <div class="term" aria-hidden="true">
+        <div class="term-bar">
+          <span class="term-dot" style="background:#fb4934;"></span>
+          <span class="term-dot" style="background:#fabd2f;"></span>
+          <span class="term-dot" style="background:#b8bb26;"></span>
+        </div>
+        <pre><span class="c4">~/zulanggara</span> <span class="c1">$</span> whoami
+<span class="c2">zul_anggara.dev</span>
+
+<span class="c4">~/zulanggara</span> <span class="c1">$</span> cat stack.json
+{
+  <span class="c3">"backend"</span>: [<span class="c2">"PHP"</span>, <span class="c2">"Yii2"</span>, <span class="c2">"CodeIgniter"</span>, <span class="c2">"Laravel"</span>, <span class="c2">"Lumen"</span>],
+  <span class="c3">"database"</span>: [<span class="c2">"MySQL"</span>],
+  <span class="c3">"tools"</span>: [<span class="c2">"Git"</span>, <span class="c2">"Bootstrap"</span>, <span class="c2">"jQuery"</span>]
+}
+
+<span class="c4">~/zulanggara</span> <span class="c1">$</span> <span class="type">status --current</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="section-label" data-i18n="about.label">Tentang Saya</p>
+        <h2 style="font-size:2rem; margin-bottom:20px;" data-i18n="about.title">Developer yang fokus pada sistem yang benar-benar dipakai orang.</h2>
+        <p data-i18n="about.p1">Saya developer backend &amp; website dengan pengalaman lebih dari tiga tahun, berfokus pada pengembangan aplikasi web dan manajemen proyek. Sebagian besar karier saya dihabiskan membangun sistem informasi untuk institusi pendidikan vokasi di Indonesia — mulai dari pengumpulan data kinerja, manajemen kerja sama, hingga monitoring data lintas instansi.</p>
+        <p data-i18n="about.p2">Punya rekam jejak mengelola proyek web secara efektif dan berkolaborasi dengan tim lintas fungsi, dari analis kebijakan hingga tim front-end, agar sistem yang dibangun benar-benar menjawab kebutuhan pengguna di lapangan.</p>
+        <div class="hero-cta" style="margin-top:8px;">
+          <a href="https://www.linkedin.com/in/zulanggara" target="_blank" rel="noopener" class="btn" data-i18n="about.cta">Profil LinkedIn</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="section-label" data-i18n="edu.label">Pendidikan</p>
+        <div class="timeline">
+          <div class="item">
+            <div class="period">2017 — 2023</div>
+            <div class="role">Universitas Negeri Yogyakarta</div>
+            <div class="org" data-i18n="edu.uny">Teknik Informatika · IPK 3.53/4.00</div>
+          </div>
+          <div class="item">
+            <div class="period">2014 — 2017</div>
+            <div class="role">SMK Negeri 2 Surakarta</div>
+            <div class="org" data-i18n="edu.smk">Rekayasa Perangkat Lunak</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="section-label" data-i18n="skills.label">Keahlian</p>
+      <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="skills.title">Tools yang dipakai sehari-hari</h2>
+      <div class="skills-grid">
+        <div class="skill-card reveal"><div class="name">PHP</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+        <div class="skill-card reveal"><div class="name">Yii2</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">CodeIgniter</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">Laravel</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">Lumen</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">MySQL</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">Git</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+        <div class="skill-card reveal"><div class="name">Bootstrap / jQuery</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="section-label" data-i18n="exp.label">Pengalaman Kerja</p>
+      <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="exp.title">Perjalanan profesional</h2>
+      <div class="timeline">
+        <div class="item">
+          <div class="period" data-i18n="exp.job1.period">Feb 2021 — Sekarang</div>
+          <div class="role" data-i18n="exp.job1.role">Website &amp; Backend Developer</div>
+          <div class="org">PT Solusi Pembayaran Elektronik</div>
+        </div>
+        <div class="item">
+          <div class="period" data-i18n="exp.job2.period">Jul 2019 — Sep 2019</div>
+          <div class="role" data-i18n="exp.job2.role">Website Developer (Magang)</div>
+          <div class="org">PT. Phicos Cipta Media</div>
+        </div>
+        <div class="item">
+          <div class="period" data-i18n="exp.job3.period">Magang</div>
+          <div class="role" data-i18n="exp.job3.role">Website Developer (Magang)</div>
+          <div class="org">CV. Indoterra Pratama</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <p class="section-label" data-i18n="proj.label">Proyek Pilihan</p>
+      <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="proj.title">Sistem yang pernah saya bangun</h2>
+      <div class="proj-grid">
+
+        <article class="proj-card reveal" data-idx="01">
+          <h3>SIDAKIN</h3>
+          <p class="desc" data-i18n="proj.sidakin.desc">Sistem Informasi Data &amp; Capaian Kinerja PT Vokasi — mengumpulkan data dari seluruh Perguruan Tinggi Vokasi di Indonesia dan mengolahnya menjadi skor capaian 8 Indikator Kinerja Utama (IKU).</p>
+          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.dashboard">Dashboard Kinerja</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-idx="02">
+          <h3>SIKERMA</h3>
+          <p class="desc" data-i18n="proj.sikerma.desc">Sistem Manajemen Kerja Sama Pendidikan Vokasi — memfasilitasi publikasi data kerja sama antara institusi vokasi dengan dunia usaha &amp; industri, sekaligus memitigasi risiko bagi Kemendikbudristek.</p>
+          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.public">Sistem Publikasi Data</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-idx="03">
+          <h3>SMONITA</h3>
+          <p class="desc" data-i18n="proj.smonita.desc">Sistem Monitoring Data — platform pemantauan data real-time yang memungkinkan akses, analisis, dan pelaporan data dari berbagai sumber secara efisien dengan visualisasi yang mudah dipahami.</p>
+          <div class="proj-tags"><span>PHP</span><span data-i18n="proj.tag.realtime">Real-time</span><span data-i18n="proj.tag.viz">Visualisasi Data</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-idx="04">
+          <h3 data-i18n="proj.ukpppg.title">Rekrutmen Penguji UKPPPG</h3>
+          <p class="desc" data-i18n="proj.ukpppg.desc">Sistem Rekrutmen Penguji UKPPPG — mendigitalkan proses seleksi dan administrasi calon penguji Uji Kinerja Program Profesi Guru secara terpusat.</p>
+          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.recruit">Sistem Rekrutmen</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-idx="05" style="grid-column:span 2;">
+          <h3>Ngabei.id</h3>
+          <p class="desc" data-i18n="proj.ngabei.desc">Platform berbasis website untuk pembelian tiket pesawat &amp; kereta, serta layanan PPOB seperti pembayaran listrik dan isi pulsa. Berperan menjaga sistem, memperbaiki bug, dan mengimplementasikan permintaan fitur dari pengguna maupun mitra API pihak ketiga.</p>
+          <div class="proj-tags"><span>Laravel</span><span>Lumen</span><span>Bootstrap</span><span>jQuery</span><span data-i18n="proj.tag.api">Integrasi API Pihak Ketiga</span></div>
+        </article>
+
+      </div>
+
+      <p class="section-label" style="margin-top:44px;" data-i18n="proj.more.label">Proyek Lainnya</p>
+      <div class="more-projects">
+        <span class="tag">Sistem Informasi Pembiayaan PPG</span>
+        <span class="tag">UKPPPG</span>
+        <span class="tag">Bantuan Insentif Pemerintah</span>
+        <span class="tag">PKM UNY</span>
+        <span class="tag">SIMAHA UNY</span>
+        <span class="tag">LPDP GTK</span>
+        <span class="tag">Program Kecakapan Wirausaha</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <p class="section-label" style="justify-content:center;" data-i18n="contact.label">Kontak</p>
+        <h2 data-i18n="contact.title">Punya proyek atau ide? Mari mengobrol.</h2>
+        <p style="color:var(--muted); max-width:52ch; margin:14px auto 0;" data-i18n="contact.lead">Terbuka untuk kolaborasi, peluang kerja, maupun sekadar diskusi seputar sistem informasi dan pengembangan backend.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="mailto:zul.anggara8@gmail.com">✉ zul.anggara8@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/zulanggara" target="_blank" rel="noopener">in/zulanggara</a>
+          <a class="btn" href="https://www.instagram.com/__zulang/" target="_blank" rel="noopener">@__zulang</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Zul Anggara. <span data-i18n="footer.rights">Seluruh hak cipta dilindungi.</span></span>
+    <span data-i18n="footer.built">Dibangun dengan HTML, CSS &amp; JS murni.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- THEME ---------- */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('themeToggle');
+  var sunIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>';
+  var moonIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
+  function applyTheme(t){
+    root.setAttribute('data-theme', t);
+    themeBtn.innerHTML = t === 'dark' ? sunIcon : moonIcon;
+    localStorage.setItem('za-theme', t);
+  }
+  var savedTheme = localStorage.getItem('za-theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+  themeBtn.addEventListener('click', function(){
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ---------- I18N ---------- */
+  var dict = {
+    en: {
+      "nav.about":"About","nav.skills":"Skills","nav.experience":"Experience","nav.projects":"Projects","nav.contact":"Contact",
+      "hero.badge":"Available for new projects",
+      "hero.hi":"Hi, I'm",
+      "hero.role":"Backend &amp; Website Developer",
+      "hero.lead":"Building stable information systems and digital services for 3+ years — from vocational-education performance systems to ticketing &amp; PPOB platforms.",
+      "hero.cta1":"View Projects","hero.cta2":"Get in Touch",
+      "hero.stat1":"Years of experience","hero.stat2":"Systems shipped","hero.stat3":"Core frameworks &amp; tools",
+      "about.label":"About Me",
+      "about.title":"A developer focused on systems people actually use.",
+      "about.p1":"I'm a backend &amp; website developer with 3+ years of experience focused on web development and project management. Most of my career has been spent building information systems for vocational higher-education institutions in Indonesia — from performance-data collection to partnership management and cross-agency data monitoring.",
+      "about.p2":"I have a track record of effectively managing web projects and collaborating with cross-functional teams, from policy analysts to front-end teams, to make sure the systems I build actually solve problems on the ground.",
+      "about.cta":"LinkedIn Profile",
+      "edu.label":"Education",
+      "edu.uny":"Informatics Engineering · GPA 3.53/4.00",
+      "edu.smk":"Software Engineering",
+      "skills.label":"Skills","skills.title":"Tools I use every day",
+      "exp.label":"Work Experience","exp.title":"Professional journey",
+      "exp.job1.period":"Feb 2021 — Present","exp.job1.role":"Website &amp; Backend Developer",
+      "exp.job2.period":"Jul 2019 — Sep 2019","exp.job2.role":"Website Developer (Internship)",
+      "exp.job3.period":"Internship","exp.job3.role":"Website Developer (Internship)",
+      "proj.label":"Selected Projects","proj.title":"Systems I've built",
+      "proj.sidakin.desc":"Performance Data &amp; Achievement Information System for Vocational Higher Education — collects data from vocational institutions across Indonesia and turns it into scores across 8 Key Performance Indicators (IKU).",
+      "proj.sikerma.desc":"Vocational Education Partnership Management System — publishes data on collaborations between vocational institutions and businesses/industry, reducing risk exposure for the Ministry of Education, Culture, Research and Technology.",
+      "proj.smonita.desc":"Data Monitoring System — a real-time platform for accessing, analyzing and reporting data from multiple sources efficiently, with clear visualizations.",
+      "proj.ukpppg.title":"UKPPPG Examiner Recruitment",
+      "proj.ukpppg.desc":"UKPPPG Examiner Recruitment System — digitizes the selection and administration process for examiners of the Teacher Professional Program Performance Test.",
+      "proj.ngabei.desc":"A web-based platform for plane &amp; train ticket purchases plus PPOB services like electricity payments and mobile credit top-ups. Responsible for maintenance, bug fixes, and implementing feature requests from users and third-party API partners.",
+      "proj.tag.dashboard":"Performance Dashboard","proj.tag.public":"Data Publication System","proj.tag.realtime":"Real-time","proj.tag.viz":"Data Visualization","proj.tag.recruit":"Recruitment System","proj.tag.api":"Third-party API Integration",
+      "proj.more.label":"Other Projects",
+      "contact.label":"Contact","contact.title":"Have a project or idea? Let's talk.",
+      "contact.lead":"Open to collaboration, job opportunities, or just a chat about information systems and backend development.",
+      "footer.rights":"All rights reserved.","footer.built":"Built with plain HTML, CSS &amp; JS."
+    },
+    id: {}
+  };
+
+  var elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(function(el){
+    var key = el.getAttribute('data-i18n');
+    dict.id[key] = el.innerHTML;
+  });
+
+  var langBtn = document.getElementById('langToggle');
+  function applyLang(lang){
+    elements.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(dict[lang] && dict[lang][key]) el.innerHTML = dict[lang][key];
+    });
+    document.documentElement.lang = lang;
+    langBtn.textContent = lang === 'id' ? 'ID' : 'EN';
+    localStorage.setItem('za-lang', lang);
+  }
+  var savedLang = localStorage.getItem('za-lang') || 'id';
+  applyLang(savedLang);
+  langBtn.addEventListener('click', function(){
+    applyLang((localStorage.getItem('za-lang') || 'id') === 'id' ? 'en' : 'id');
+  });
+
+  /* ---------- REVEAL ON SCROLL ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
