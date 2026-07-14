@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zul Anggara — Backend &amp; Website Developer</title>
-<meta name="description" content="Zul Anggara, Backend &amp; Website Developer dari Yogyakarta. 3+ tahun membangun sistem informasi pemerintah &amp; layanan digital dengan PHP, Yii2, CodeIgniter, Laravel, dan MySQL.">
+<title>Zul Anggara — Backend Developer, Fintech &amp; Sistem Pembayaran</title>
+<meta name="description" content="Zul Anggara, Backend Developer fokus sistem pembayaran di Paydia (PJP Kategori 1 berlisensi Bank Indonesia). Berpengalaman dengan Go, PHP, Node.js, MySQL, Redis &amp; Kubernetes di sistem fintech, pemerintahan, dan kampus.">
 <meta name="theme-color" content="#1d2021">
 <meta name="color-scheme" content="dark light">
 <link rel="canonical" href="https://zulanggara.github.io/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Zul Anggara — Backend &amp; Website Developer">
-<meta property="og:description" content="Portofolio Zul Anggara: sistem informasi kinerja vokasi, kerja sama pendidikan, monitoring data, rekrutmen penguji, hingga platform tiket &amp; PPOB Ngabei.id.">
+<meta property="og:title" content="Zul Anggara — Backend Developer, Fintech &amp; Sistem Pembayaran">
+<meta property="og:description" content="Backend Developer di Paydia (PJP Kategori 1). Membangun layanan pembayaran, migrasi sistem, dan integrasi vendor dengan Go, PHP, Node.js &amp; Kubernetes.">
 <meta property="og:url" content="https://zulanggara.github.io/">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zul Anggara — Backend &amp; Website Developer">
-<meta name="twitter:description" content="3+ tahun membangun sistem informasi &amp; layanan digital dengan PHP, Yii2, CodeIgniter, Laravel, MySQL.">
+<meta name="twitter:title" content="Zul Anggara — Backend Developer, Fintech &amp; Sistem Pembayaran">
+<meta name="twitter:description" content="Backend Developer di Paydia (PJP Kategori 1). Go, PHP, Node.js, MySQL, Redis, Kubernetes.">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231d2021'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' fill='%23fe8019' text-anchor='middle'%3EZA%3C/text%3E%3C/svg%3E">
 
@@ -30,17 +30,28 @@
   "@type": "Person",
   "name": "Zul Anggara",
   "url": "https://zulanggara.github.io/",
-  "jobTitle": "Backend & Website Developer",
+  "jobTitle": "Backend Developer — Fintech & Payment Systems",
   "email": "mailto:zul.anggara8@gmail.com",
+  "telephone": "+62-813-3899-4643",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "PT Datacell Infomedia (Paydia)"
+  },
   "sameAs": [
     "https://www.linkedin.com/in/zulanggara",
+    "https://github.com/zulanggara",
     "https://www.instagram.com/__zulang/"
   ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "Universitas Negeri Yogyakarta"
   },
-  "knowsAbout": ["PHP", "Yii2", "CodeIgniter", "Laravel", "Lumen", "MySQL", "Git"]
+  "knowsAbout": ["Go", "PHP", "Node.js", "Laravel", "CodeIgniter", "Yii2", "Gin", "MySQL", "Redis", "PostgreSQL", "Elasticsearch", "Kubernetes", "QRIS", "Payment Systems"]
 }
 </script>
 
@@ -127,14 +138,14 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
   display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:.78rem; font-weight:700;
 }
 .icon-btn:hover{ border-color:var(--accent); color:var(--accent); }
-.burger{ display:none; }
 
 /* ===== HERO ===== */
 .hero{ padding:96px 0 72px; }
 .hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
-.hero h1{ font-size:clamp(2.4rem, 5vw, 4rem); line-height:1.05; margin:18px 0; }
+.hero h1{ font-size:clamp(2.2rem, 4.6vw, 3.6rem); line-height:1.08; margin:18px 0 4px; }
 .hero h1 .accent{ color:var(--accent); }
-.hero p.lead{ color:var(--muted); font-size:1.05rem; max-width:52ch; }
+.role-sub{ color:var(--accent-3); font-size:1rem; font-weight:700; letter-spacing:.02em; margin:0 0 18px; }
+.hero p.lead{ color:var(--muted); font-size:1.02rem; max-width:54ch; }
 .hero-cta{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
 .stats{ display:flex; gap:32px; margin-top:48px; flex-wrap:wrap; }
 .stat b{ font-family:var(--font-display); font-size:1.8rem; display:block; color:var(--accent); }
@@ -148,7 +159,7 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 @keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
 .term-bar{ display:flex; gap:7px; padding:12px 14px; background:var(--bg-raised); border-bottom:1px solid var(--border);}
 .term-dot{ width:11px; height:11px; border-radius:50%; }
-.term pre{ margin:0; padding:22px; font-size:.85rem; overflow-x:auto; line-height:1.7; }
+.term pre{ margin:0; padding:22px; font-size:.8rem; overflow-x:auto; line-height:1.7; }
 .term .c1{ color:var(--accent-3); } .term .c2{ color:var(--accent-2); } .term .c3{ color:var(--accent); } .term .c4{ color:var(--muted); }
 .type::after{ content:"▌"; animation:blink 1s step-end infinite; color:var(--accent); }
 @keyframes blink{ 50%{opacity:0;} }
@@ -176,18 +187,14 @@ section{ padding:88px 0; border-top:1px solid var(--border); }
 .timeline .role{ font-family:var(--font-display); font-weight:700; font-size:1rem; }
 .timeline .org{ color:var(--accent-3); font-size:.85rem; }
 .timeline .period{ color:var(--muted); font-size:.78rem; margin-bottom:4px; }
+.timeline .desc{ color:var(--muted); font-size:.88rem; margin:8px 0 0; max-width:62ch; }
+.timeline ul.exp-list{ margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:.85rem; display:flex; flex-direction:column; gap:6px; max-width:64ch; }
+.timeline ul.exp-list b{ color:var(--fg); }
 
 /* ===== SKILLS ===== */
-.skills-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:14px; }
-.skill-card{
-  border:1px solid var(--border); border-radius:10px; padding:18px 16px; background:var(--bg-alt);
-  transition:transform .2s ease, border-color .2s ease;
-}
-.skill-card:hover{ transform:translateY(-4px); border-color:var(--accent); }
-.skill-card .name{ font-family:var(--font-display); font-weight:700; }
-.skill-card .lvl{ display:flex; gap:4px; margin-top:10px; }
-.skill-card .lvl i{ height:5px; flex:1; border-radius:2px; background:var(--border); }
-.skill-card .lvl i.on{ background:var(--accent); }
+.skill-group{ margin-bottom:30px; }
+.skill-group h4{ font-family:var(--font-display); font-size:1rem; font-weight:700; margin:0 0 12px; }
+.skill-chips{ display:flex; flex-wrap:wrap; gap:10px; }
 
 /* ===== PROJECTS ===== */
 .proj-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:22px; }
@@ -200,7 +207,8 @@ section{ padding:88px 0; border-top:1px solid var(--border); }
   font-size:5.5rem; font-weight:800; color:var(--bg-raised); z-index:0; line-height:1;
 }
 .proj-card > *{ position:relative; z-index:1; }
-.proj-card h3{ font-size:1.25rem; }
+.proj-card h3{ font-size:1.2rem; }
+.proj-card .meta{ color:var(--muted); font-size:.76rem; text-transform:uppercase; letter-spacing:.06em; }
 .proj-card .desc{ color:var(--muted); font-size:.9rem; flex:1; }
 .proj-tags{ display:flex; gap:8px; flex-wrap:wrap; }
 .proj-tags span{ font-size:.72rem; border:1px solid var(--border); border-radius:6px; padding:3px 8px; color:var(--accent-3); }
@@ -249,20 +257,21 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
   <section class="hero" id="home" style="border-top:none; padding-top:64px;">
     <div class="wrap hero-grid">
       <div>
-        <span class="tag">● <span data-i18n="hero.badge">Tersedia untuk proyek baru</span></span>
+        <span class="tag">● <span data-i18n="hero.badge">Saat ini di Paydia — PJP Kategori 1</span></span>
         <h1>
           <span data-i18n="hero.hi">Halo, saya</span> Zul Anggara<br>
-          <span class="accent" data-i18n="hero.role">Backend &amp; Website Developer</span>
+          <span class="accent" data-i18n="hero.role">Backend Developer</span>
         </h1>
-        <p class="lead" data-i18n="hero.lead">Membangun sistem informasi dan layanan digital yang stabil selama 3+ tahun — dari sistem kinerja institusi pendidikan vokasi hingga platform tiket &amp; PPOB.</p>
+        <p class="role-sub" data-i18n="hero.rolesub">Fintech &amp; Sistem Pembayaran</p>
+        <p class="lead" data-i18n="hero.lead">Membangun dan memelihara layanan backend untuk transaksi, integrasi vendor, dan migrasi sistem lama ke teknologi baru — bekerja dengan PHP, Go, dan Node.js di atas MySQL, Redis, dan Elasticsearch pada Kubernetes.</p>
         <div class="hero-cta">
           <a href="#projects" class="btn primary" data-i18n="hero.cta1">Lihat Proyek</a>
           <a href="#contact" class="btn" data-i18n="hero.cta2">Hubungi Saya</a>
         </div>
         <div class="stats">
-          <div class="stat"><b>3+</b><span data-i18n="hero.stat1">Tahun pengalaman</span></div>
-          <div class="stat"><b>10+</b><span data-i18n="hero.stat2">Sistem dirilis</span></div>
-          <div class="stat"><b>5</b><span data-i18n="hero.stat3">Framework &amp; tools inti</span></div>
+          <div class="stat"><b>5+</b><span data-i18n="hero.stat1">Tahun pengalaman</span></div>
+          <div class="stat"><b>10+</b><span data-i18n="hero.stat2">Sistem &amp; proyek dirilis</span></div>
+          <div class="stat"><b>5</b><span data-i18n="hero.stat3">Bahasa pemrograman inti</span></div>
         </div>
       </div>
       <div class="term" aria-hidden="true">
@@ -276,9 +285,10 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
 
 <span class="c4">~/zulanggara</span> <span class="c1">$</span> cat stack.json
 {
-  <span class="c3">"backend"</span>: [<span class="c2">"PHP"</span>, <span class="c2">"Yii2"</span>, <span class="c2">"CodeIgniter"</span>, <span class="c2">"Laravel"</span>, <span class="c2">"Lumen"</span>],
-  <span class="c3">"database"</span>: [<span class="c2">"MySQL"</span>],
-  <span class="c3">"tools"</span>: [<span class="c2">"Git"</span>, <span class="c2">"Bootstrap"</span>, <span class="c2">"jQuery"</span>]
+  <span class="c3">"languages"</span>: [<span class="c2">"Go"</span>, <span class="c2">"PHP"</span>, <span class="c2">"JavaScript"</span>, <span class="c2">"TypeScript"</span>, <span class="c2">"SQL"</span>],
+  <span class="c3">"frameworks"</span>: [<span class="c2">"Laravel"</span>, <span class="c2">"CodeIgniter"</span>, <span class="c2">"Gin"</span>, <span class="c2">"Yii2"</span>],
+  <span class="c3">"storage"</span>: [<span class="c2">"MySQL"</span>, <span class="c2">"Redis"</span>, <span class="c2">"PostgreSQL"</span>, <span class="c2">"Elasticsearch"</span>],
+  <span class="c3">"infra"</span>: [<span class="c2">"Kubernetes"</span>, <span class="c2">"Docker"</span>, <span class="c2">"Git"</span>]
 }
 
 <span class="c4">~/zulanggara</span> <span class="c1">$</span> <span class="type">status --current</span></pre>
@@ -291,9 +301,9 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
     <div class="wrap about-grid">
       <div class="reveal">
         <p class="section-label" data-i18n="about.label">Tentang Saya</p>
-        <h2 style="font-size:2rem; margin-bottom:20px;" data-i18n="about.title">Developer yang fokus pada sistem yang benar-benar dipakai orang.</h2>
-        <p data-i18n="about.p1">Saya developer backend &amp; website dengan pengalaman lebih dari tiga tahun, berfokus pada pengembangan aplikasi web dan manajemen proyek. Sebagian besar karier saya dihabiskan membangun sistem informasi untuk institusi pendidikan vokasi di Indonesia — mulai dari pengumpulan data kinerja, manajemen kerja sama, hingga monitoring data lintas instansi.</p>
-        <p data-i18n="about.p2">Punya rekam jejak mengelola proyek web secara efektif dan berkolaborasi dengan tim lintas fungsi, dari analis kebijakan hingga tim front-end, agar sistem yang dibangun benar-benar menjawab kebutuhan pengguna di lapangan.</p>
+        <h2 style="font-size:2rem; margin-bottom:20px;" data-i18n="about.title">Backend developer yang fokus di sistem pembayaran.</h2>
+        <p data-i18n="about.p1">Backend developer dengan fokus di sistem pembayaran, saat ini di Paydia — penyedia jasa pembayaran berlisensi Bank Indonesia (PJP Kategori 1) untuk uang elektronik, transfer dana, dan QRIS. Terbiasa membangun dan mengembangkan layanan backend untuk kebutuhan transaksi, integrasi dengan berbagai vendor, sampai migrasi sistem lama ke teknologi yang lebih baru. Bekerja dengan PHP, Go, dan Node.js di atas MySQL, Redis, dan Elasticsearch pada Kubernetes, dengan latar belakang yang mencakup sistem pembayaran, sistem pemerintahan, dan platform kampus.</p>
+        <p data-i18n="about.p2">Terbiasa menuntaskan proyek dari ujung ke ujung — mulai dari memimpin migrasi payment acquirer tanpa downtime, menutup 100% temuan penetration test internal, hingga membangun kontrol pencegahan fraud dan fitur disbursement/QRIS yang terintegrasi dengan banyak vendor pembayaran.</p>
         <div class="hero-cta" style="margin-top:8px;">
           <a href="https://www.linkedin.com/in/zulanggara" target="_blank" rel="noopener" class="btn" data-i18n="about.cta">Profil LinkedIn</a>
         </div>
@@ -304,12 +314,13 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
           <div class="item">
             <div class="period">2017 — 2023</div>
             <div class="role">Universitas Negeri Yogyakarta</div>
-            <div class="org" data-i18n="edu.uny">Teknik Informatika · IPK 3.53/4.00</div>
+            <div class="org" data-i18n="edu.uny">Sarjana Pendidikan Teknik Informatika</div>
+            <p class="desc" data-i18n="edu.uny.note">Fokus perkuliahan di rekayasa perangkat lunak dan pengembangan web. Mulai bekerja sebagai developer sejak tahun ketiga.</p>
           </div>
           <div class="item">
             <div class="period">2014 — 2017</div>
             <div class="role">SMK Negeri 2 Surakarta</div>
-            <div class="org" data-i18n="edu.smk">Rekayasa Perangkat Lunak</div>
+            <div class="org" data-i18n="edu.smk">Rekayasa Perangkat Lunak (RPL)</div>
           </div>
         </div>
       </div>
@@ -320,16 +331,41 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
   <section id="skills">
     <div class="wrap">
       <p class="section-label" data-i18n="skills.label">Keahlian</p>
-      <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="skills.title">Tools yang dipakai sehari-hari</h2>
-      <div class="skills-grid">
-        <div class="skill-card reveal"><div class="name">PHP</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
-        <div class="skill-card reveal"><div class="name">Yii2</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">CodeIgniter</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">Laravel</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">Lumen</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">MySQL</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">Git</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
-        <div class="skill-card reveal"><div class="name">Bootstrap / jQuery</div><div class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="skills.title">Tools &amp; teknologi yang saya pakai</h2>
+
+      <div class="skill-group reveal">
+        <h4 data-i18n="skills.cat.lang">Bahasa Pemrograman</h4>
+        <div class="skill-chips">
+          <span class="tag">Go (Golang)</span><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 data-i18n="skills.cat.framework">Framework &amp; Runtime</h4>
+        <div class="skill-chips">
+          <span class="tag">Laravel</span><span class="tag">CodeIgniter 3</span><span class="tag">Gin</span><span class="tag">Node.js</span><span class="tag">Yii2</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 data-i18n="skills.cat.db">Basis Data &amp; Penyimpanan</h4>
+        <div class="skill-chips">
+          <span class="tag">MySQL</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Microsoft SQL Server</span><span class="tag">Elasticsearch</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 data-i18n="skills.cat.infra">Infrastruktur &amp; Tools</h4>
+        <div class="skill-chips">
+          <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Git / GitLab</span><span class="tag">Kibana</span><span class="tag">SonarQube</span><span class="tag">Cron / Supervisor</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 data-i18n="skills.cat.domain">Domain &amp; Spesialisasi</h4>
+        <div class="skill-chips">
+          <span class="tag">Payment Systems</span><span class="tag">QRIS / MPM</span><span class="tag">Disbursement / Payout</span><span class="tag">Rekonsiliasi Transaksi</span><span class="tag">Deteksi Fraud</span><span class="tag">Keamanan API</span><span class="tag">Microservices</span>
+        </div>
       </div>
     </div>
   </section>
@@ -341,19 +377,46 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       <h2 style="font-size:2rem; margin-bottom:32px;" data-i18n="exp.title">Perjalanan profesional</h2>
       <div class="timeline">
         <div class="item">
-          <div class="period" data-i18n="exp.job1.period">Feb 2021 — Sekarang</div>
-          <div class="role" data-i18n="exp.job1.role">Website &amp; Backend Developer</div>
-          <div class="org">PT Solusi Pembayaran Elektronik</div>
+          <div class="period" data-i18n="exp.job1.period">Jul 2024 — Sekarang</div>
+          <div class="role" data-i18n="exp.job1.role">Backend Developer</div>
+          <div class="org">PT Datacell Infomedia (Paydia) · Jakarta</div>
+          <p class="desc" data-i18n="exp.job1.desc">Penyedia Jasa Pembayaran berlisensi Bank Indonesia (PJP Kategori 1): uang elektronik, transfer dana, QRIS. Menangani layanan pembayaran inti di platform merchant, aplikasi mobile, dan dashboard admin.</p>
+          <ul class="exp-list" data-i18n="exp.job1.list">
+            <li>Memimpin migrasi payment acquirer dari monolit PHP ke Go, dengan jalur fallback ke sistem lama sehingga peralihan berjalan tanpa downtime pada layanan produksi yang aktif.</li>
+            <li>Menerapkan partisi tabel harian dengan cron backup &amp; cleanup otomatis untuk data transaksi dan rekonsiliasi bervolume tinggi, menjaga performa query tetap stabil.</li>
+            <li>Menutup <b>100%</b> temuan penetration test internal di tiga sistem — platform merchant, SNAP API, dan aplikasi mobile — sekaligus mengeraskan autentikasi.</li>
+            <li>Membangun kontrol pencegahan fraud pada onboarding merchant: pemblokiran otomatis saat melewati ambang batas, serta pengecekan blacklist nama, identitas, dan IP.</li>
+            <li>Mengembangkan fitur disbursement &amp; QRIS menyeluruh — integrasi vendor, bulk payout, decode MPM, dan callback QR statis dengan penanganan signature &amp; retry.</li>
+          </ul>
         </div>
+
         <div class="item">
-          <div class="period" data-i18n="exp.job2.period">Jul 2019 — Sep 2019</div>
-          <div class="role" data-i18n="exp.job2.role">Website Developer (Magang)</div>
-          <div class="org">PT. Phicos Cipta Media</div>
+          <div class="period" data-i18n="exp.job2.period">Feb 2021 — Jul 2024</div>
+          <div class="role" data-i18n="exp.job2.role">Backend / Laravel Developer</div>
+          <div class="org">Phicos (Ideas for IT Solutions) · Surakarta</div>
+          <p class="desc" data-i18n="exp.job2.desc">Pengembangan aplikasi web untuk kementerian pemerintah Indonesia: sistem bantuan belajar, sistem pengumpulan data nasional lintas instansi pendidikan, dan sistem penilaian kinerja. Sebagian besar backend &amp; API dibangun dengan PHP (Laravel dan CodeIgniter).</p>
+          <ul class="exp-list" data-i18n="exp.job2.list">
+            <li><b>Full-time</b> (Agu 2021 – Jul 2024) — mengembangkan backend &amp; API dari ujung ke ujung untuk beberapa sistem kementerian.</li>
+            <li><b>Kontrak</b> (Mar 2021 – Agu 2021) — naik status dari magang setelah beberapa bulan berdasarkan performa; tetap mengembangkan backend sambil menangani helpdesk &amp; dukungan IT internal.</li>
+            <li><b>Magang</b> (Feb 2021 – Mar 2021) — membantu membangun sistem bantuan dana kementerian dengan PHP (Laravel) &amp; MySQL; belajar Job/Queue dan proses background dengan Supervisor.</li>
+          </ul>
         </div>
+
         <div class="item">
-          <div class="period" data-i18n="exp.job3.period">Magang</div>
-          <div class="role" data-i18n="exp.job3.role">Website Developer (Magang)</div>
-          <div class="org">CV. Indoterra Pratama</div>
+          <div class="period" data-i18n="exp.job3.period">Jul 2019 — Sep 2019</div>
+          <div class="role" data-i18n="exp.job3.role">Backend Developer (Magang)</div>
+          <div class="org">PT Solusi Pembayaran Elektronik · Yogyakarta</div>
+          <p class="desc" data-i18n="exp.job3.desc">Bekerja dalam tim kecil membangun sistem ERP internal menggunakan PHP (Yii2) dan MySQL, dengan Git untuk version control.</p>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:52px;" data-i18n="org.label">Organisasi</p>
+      <div class="timeline">
+        <div class="item">
+          <div class="period" data-i18n="org.item.period">Jun 2018 — Des 2021</div>
+          <div class="role" data-i18n="org.item.role">Tim IT — PKM Center UNY</div>
+          <div class="org">Universitas Negeri Yogyakarta</div>
+          <p class="desc" data-i18n="org.item.desc">Terlibat sebagai relawan di divisi kemahasiswaan, membangun dan memelihara sistem internal untuk manajemen program kemahasiswaan dan pengajuan proposal/bantuan dana, sekaligus membantu logistik acara.</p>
         </div>
       </div>
     </div>
@@ -367,33 +430,45 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       <div class="proj-grid">
 
         <article class="proj-card reveal" data-idx="01">
-          <h3>SIDAKIN</h3>
-          <p class="desc" data-i18n="proj.sidakin.desc">Sistem Informasi Data &amp; Capaian Kinerja PT Vokasi — mengumpulkan data dari seluruh Perguruan Tinggi Vokasi di Indonesia dan mengolahnya menjadi skor capaian 8 Indikator Kinerja Utama (IKU).</p>
-          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.dashboard">Dashboard Kinerja</span></div>
+          <h3 data-i18n="proj.fraud.title">Sistem Deteksi Fraud</h3>
+          <div class="meta" data-i18n="proj.fraud.meta">Internal · Paydia</div>
+          <p class="desc" data-i18n="proj.fraud.desc">Sistem internal untuk mendeteksi pola transaksi mencurigakan dari data pembayaran bervolume besar, berdasarkan parameter yang bisa dikonfigurasi seperti lonjakan transaksi dan nominal tidak wajar. Dibangun sebagai panel admin untuk meninjau &amp; mengelola transaksi yang ditandai.</p>
+          <div class="proj-tags"><span>Laravel</span><span>MySQL</span><span>Redis</span></div>
         </article>
 
         <article class="proj-card reveal" data-idx="02">
-          <h3>SIKERMA</h3>
-          <p class="desc" data-i18n="proj.sikerma.desc">Sistem Manajemen Kerja Sama Pendidikan Vokasi — memfasilitasi publikasi data kerja sama antara institusi vokasi dengan dunia usaha &amp; industri, sekaligus memitigasi risiko bagi Kemendikbudristek.</p>
-          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.public">Sistem Publikasi Data</span></div>
+          <h3>Payment Biller Gateway</h3>
+          <div class="meta" data-i18n="proj.biller.meta">Internal · Paydia</div>
+          <p class="desc" data-i18n="proj.biller.desc">Layanan broker yang menghubungkan satu vendor upstream ke banyak platform client, sehingga integrasi vendor cukup dibangun sekali dan dipakai ulang oleh berbagai aplikasi atau website yang butuh layanan top-up atau billing. Menggunakan Redis untuk notifikasi real-time.</p>
+          <div class="proj-tags"><span>Go</span><span>PostgreSQL</span><span>Redis</span></div>
         </article>
 
         <article class="proj-card reveal" data-idx="03">
-          <h3>SMONITA</h3>
-          <p class="desc" data-i18n="proj.smonita.desc">Sistem Monitoring Data — platform pemantauan data real-time yang memungkinkan akses, analisis, dan pelaporan data dari berbagai sumber secara efisien dengan visualisasi yang mudah dipahami.</p>
-          <div class="proj-tags"><span>PHP</span><span data-i18n="proj.tag.realtime">Real-time</span><span data-i18n="proj.tag.viz">Visualisasi Data</span></div>
+          <h3>SIDAKIN &amp; SIKERMA</h3>
+          <div class="meta" data-i18n="proj.sidsik.meta">Kementerian Pendidikan (Vokasi)</div>
+          <p class="desc" data-i18n="proj.sidsik.desc">Platform nasional yang mengumpulkan data dari perguruan tinggi vokasi di seluruh Indonesia dan mengolahnya menjadi skor capaian Indikator Kinerja Utama (IKU), serta pengelolaan dan publikasi data kerja sama dengan industri.</p>
+          <div class="proj-tags"><span>PHP / Laravel</span><span>SQL Server</span><span>REST API</span></div>
         </article>
 
         <article class="proj-card reveal" data-idx="04">
-          <h3 data-i18n="proj.ukpppg.title">Rekrutmen Penguji UKPPPG</h3>
-          <p class="desc" data-i18n="proj.ukpppg.desc">Sistem Rekrutmen Penguji UKPPPG — mendigitalkan proses seleksi dan administrasi calon penguji Uji Kinerja Program Profesi Guru secara terpusat.</p>
-          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span data-i18n="proj.tag.recruit">Sistem Rekrutmen</span></div>
+          <h3>SIMONITA</h3>
+          <div class="meta">PERURI</div>
+          <p class="desc" data-i18n="proj.simonita.desc">Sistem monitoring dan pelaporan data real-time dengan job terjadwal dan sinkronisasi RSync.</p>
+          <div class="proj-tags"><span>PHP / Laravel</span><span>SQL Server</span></div>
         </article>
 
-        <article class="proj-card reveal" data-idx="05" style="grid-column:span 2;">
+        <article class="proj-card reveal" data-idx="05">
           <h3>Ngabei.id</h3>
-          <p class="desc" data-i18n="proj.ngabei.desc">Platform berbasis website untuk pembelian tiket pesawat &amp; kereta, serta layanan PPOB seperti pembayaran listrik dan isi pulsa. Berperan menjaga sistem, memperbaiki bug, dan mengimplementasikan permintaan fitur dari pengguna maupun mitra API pihak ketiga.</p>
-          <div class="proj-tags"><span>Laravel</span><span>Lumen</span><span>Bootstrap</span><span>jQuery</span><span data-i18n="proj.tag.api">Integrasi API Pihak Ketiga</span></div>
+          <div class="meta" data-i18n="proj.ngabei.meta">Platform Tiket &amp; PPOB</div>
+          <p class="desc" data-i18n="proj.ngabei.desc">Platform web untuk tiket pesawat/kereta dan layanan PPOB (listrik, isi pulsa, dll), dengan lapisan connector yang mengintegrasikan API pihak ketiga.</p>
+          <div class="proj-tags"><span>PHP / Laravel</span><span>Lumen</span></div>
+        </article>
+
+        <article class="proj-card reveal" data-idx="06">
+          <h3 data-i18n="proj.simaha.title">SIMAHA &amp; Sistem PKM</h3>
+          <div class="meta">Universitas Negeri Yogyakarta</div>
+          <p class="desc" data-i18n="proj.simaha.desc">Platform kampus untuk pengajuan dana/surat mahasiswa dan pengelolaan proposal Program Kreativitas Mahasiswa (PKM), penilaian review, dan pelaporan.</p>
+          <div class="proj-tags"><span>PHP / Laravel</span><span>MySQL</span></div>
         </article>
 
       </div>
@@ -401,10 +476,8 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       <p class="section-label" style="margin-top:44px;" data-i18n="proj.more.label">Proyek Lainnya</p>
       <div class="more-projects">
         <span class="tag">Sistem Informasi Pembiayaan PPG</span>
-        <span class="tag">UKPPPG</span>
+        <span class="tag">Sistem Rekrutmen Penguji UKPPPG</span>
         <span class="tag">Bantuan Insentif Pemerintah</span>
-        <span class="tag">PKM UNY</span>
-        <span class="tag">SIMAHA UNY</span>
         <span class="tag">LPDP GTK</span>
         <span class="tag">Program Kecakapan Wirausaha</span>
       </div>
@@ -417,10 +490,12 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
       <div class="contact-box reveal">
         <p class="section-label" style="justify-content:center;" data-i18n="contact.label">Kontak</p>
         <h2 data-i18n="contact.title">Punya proyek atau ide? Mari mengobrol.</h2>
-        <p style="color:var(--muted); max-width:52ch; margin:14px auto 0;" data-i18n="contact.lead">Terbuka untuk kolaborasi, peluang kerja, maupun sekadar diskusi seputar sistem informasi dan pengembangan backend.</p>
+        <p style="color:var(--muted); max-width:52ch; margin:14px auto 0;" data-i18n="contact.lead">Terbuka untuk kolaborasi, peluang kerja, maupun sekadar diskusi seputar sistem pembayaran dan pengembangan backend.</p>
         <div class="contact-links">
           <a class="btn primary" href="mailto:zul.anggara8@gmail.com">✉ zul.anggara8@gmail.com</a>
+          <a class="btn" href="tel:+6281338994643">☎ +62 813-3899-4643</a>
           <a class="btn" href="https://www.linkedin.com/in/zulanggara" target="_blank" rel="noopener">in/zulanggara</a>
+          <a class="btn" href="https://github.com/zulanggara" target="_blank" rel="noopener">github.com/zulanggara</a>
           <a class="btn" href="https://www.instagram.com/__zulang/" target="_blank" rel="noopener">@__zulang</a>
         </div>
       </div>
@@ -460,36 +535,56 @@ footer{ border-top:1px solid var(--border); padding:32px 0; }
   var dict = {
     en: {
       "nav.about":"About","nav.skills":"Skills","nav.experience":"Experience","nav.projects":"Projects","nav.contact":"Contact",
-      "hero.badge":"Available for new projects",
+      "hero.badge":"Currently at Paydia — PJP Category 1",
       "hero.hi":"Hi, I'm",
-      "hero.role":"Backend &amp; Website Developer",
-      "hero.lead":"Building stable information systems and digital services for 3+ years — from vocational-education performance systems to ticketing &amp; PPOB platforms.",
+      "hero.role":"Backend Developer",
+      "hero.rolesub":"Fintech &amp; Payment Systems",
+      "hero.lead":"Building and maintaining backend services for transaction processing, vendor integration, and legacy-system migration — working across PHP, Go, and Node.js with MySQL, Redis, and Elasticsearch on Kubernetes.",
       "hero.cta1":"View Projects","hero.cta2":"Get in Touch",
-      "hero.stat1":"Years of experience","hero.stat2":"Systems shipped","hero.stat3":"Core frameworks &amp; tools",
+      "hero.stat1":"Years of experience","hero.stat2":"Systems &amp; projects shipped","hero.stat3":"Core languages",
       "about.label":"About Me",
-      "about.title":"A developer focused on systems people actually use.",
-      "about.p1":"I'm a backend &amp; website developer with 3+ years of experience focused on web development and project management. Most of my career has been spent building information systems for vocational higher-education institutions in Indonesia — from performance-data collection to partnership management and cross-agency data monitoring.",
-      "about.p2":"I have a track record of effectively managing web projects and collaborating with cross-functional teams, from policy analysts to front-end teams, to make sure the systems I build actually solve problems on the ground.",
+      "about.title":"A backend developer focused on payment systems.",
+      "about.p1":"Backend developer focused on payment systems, currently at Paydia — a Bank Indonesia–licensed Payment Service Provider (PJP Category 1) for electronic money, fund transfer, and QRIS. Comfortable building and maintaining backend services for transaction processing, integrating with various vendors, and migrating legacy systems to newer technology. Works across PHP, Go, and Node.js with MySQL, Redis, and Elasticsearch on Kubernetes, with a background that spans payments, government systems, and university platforms.",
+      "about.p2":"Used to owning projects end-to-end — from leading a zero-downtime payment acquirer migration and closing 100% of internal penetration-test findings, to building fraud-prevention controls and disbursement/QRIS features integrated with multiple payment vendors.",
       "about.cta":"LinkedIn Profile",
       "edu.label":"Education",
-      "edu.uny":"Informatics Engineering · GPA 3.53/4.00",
-      "edu.smk":"Software Engineering",
-      "skills.label":"Skills","skills.title":"Tools I use every day",
+      "edu.uny":"Bachelor's in Informatics Engineering Education",
+      "edu.uny.note":"Coursework focused on software engineering and web development. Started working as a developer from third year onward.",
+      "edu.smk":"Software Engineering (RPL)",
+      "skills.label":"Skills","skills.title":"Tools &amp; technologies I use",
+      "skills.cat.lang":"Languages",
+      "skills.cat.framework":"Frameworks &amp; Runtime",
+      "skills.cat.db":"Databases &amp; Storage",
+      "skills.cat.infra":"Infrastructure &amp; Tools",
+      "skills.cat.domain":"Domain &amp; Specialisation",
       "exp.label":"Work Experience","exp.title":"Professional journey",
-      "exp.job1.period":"Feb 2021 — Present","exp.job1.role":"Website &amp; Backend Developer",
-      "exp.job2.period":"Jul 2019 — Sep 2019","exp.job2.role":"Website Developer (Internship)",
-      "exp.job3.period":"Internship","exp.job3.role":"Website Developer (Internship)",
+      "exp.job1.period":"Jul 2024 — Present","exp.job1.role":"Backend Developer",
+      "exp.job1.desc":"Bank Indonesia–licensed Payment Service Provider (PJP Category 1): electronic money, fund transfer, QRIS. Work on core payment services across the merchant platform, mobile app, and admin dashboard.",
+      "exp.job1.list":"<li>Led the migration of the payment acquirer from a PHP monolith to Go, delivering it with a fallback path to the existing system for a zero-downtime cutover on a live production service.</li><li>Introduced daily table partitioning with automated backup &amp; cleanup cron jobs for high-volume transaction and reconciliation data, keeping query performance stable.</li><li>Closed <b>100%</b> of internal penetration-test findings across three systems — the merchant platform, SNAP API, and mobile app — and hardened authentication in the process.</li><li>Built fraud-prevention controls for merchant onboarding: auto-block on threshold breach, plus blacklist checks on names, identifiers, and IPs.</li><li>Delivered disbursement &amp; QRIS features end-to-end — vendor integration, bulk payout, MPM decoding, and static-QR callback with signature handling &amp; retries.</li>",
+      "exp.job2.period":"Feb 2021 — Jul 2024","exp.job2.role":"Backend / Laravel Developer",
+      "exp.job2.desc":"Web application development for Indonesian government ministries: a learning-assistance platform, a national data-collection system spanning educational institutions, and a performance-assessment tool. Most backend &amp; API work built with PHP (Laravel and CodeIgniter).",
+      "exp.job2.list":"<li><b>Full-time</b> (Aug 2021 – Jul 2024) — built backend &amp; APIs end-to-end for several ministry systems.</li><li><b>Contract</b> (Mar 2021 – Aug 2021) — moved from internship to contract after a few months based on performance; continued backend development while managing the internal helpdesk &amp; IT support.</li><li><b>Internship</b> (Feb 2021 – Mar 2021) — helped build a fund-assistance system for a government ministry with PHP (Laravel) &amp; MySQL; learned Job/Queue and running background processes with Supervisor.</li>",
+      "exp.job3.period":"Jul 2019 — Sep 2019","exp.job3.role":"Backend Developer (Intern)",
+      "exp.job3.desc":"Worked with a small team to build an internal ERP system using PHP (Yii2) and MySQL, with Git for version control.",
+      "org.label":"Organizations",
+      "org.item.period":"Jun 2018 — Dec 2021","org.item.role":"IT Team — PKM Center UNY",
+      "org.item.desc":"Volunteered in the student affairs division, building and maintaining internal systems for student program management and grant/proposal submissions, alongside supporting event logistics.",
       "proj.label":"Selected Projects","proj.title":"Systems I've built",
-      "proj.sidakin.desc":"Performance Data &amp; Achievement Information System for Vocational Higher Education — collects data from vocational institutions across Indonesia and turns it into scores across 8 Key Performance Indicators (IKU).",
-      "proj.sikerma.desc":"Vocational Education Partnership Management System — publishes data on collaborations between vocational institutions and businesses/industry, reducing risk exposure for the Ministry of Education, Culture, Research and Technology.",
-      "proj.smonita.desc":"Data Monitoring System — a real-time platform for accessing, analyzing and reporting data from multiple sources efficiently, with clear visualizations.",
-      "proj.ukpppg.title":"UKPPPG Examiner Recruitment",
-      "proj.ukpppg.desc":"UKPPPG Examiner Recruitment System — digitizes the selection and administration process for examiners of the Teacher Professional Program Performance Test.",
-      "proj.ngabei.desc":"A web-based platform for plane &amp; train ticket purchases plus PPOB services like electricity payments and mobile credit top-ups. Responsible for maintenance, bug fixes, and implementing feature requests from users and third-party API partners.",
-      "proj.tag.dashboard":"Performance Dashboard","proj.tag.public":"Data Publication System","proj.tag.realtime":"Real-time","proj.tag.viz":"Data Visualization","proj.tag.recruit":"Recruitment System","proj.tag.api":"Third-party API Integration",
+      "proj.fraud.title":"Fraud Detection System",
+      "proj.fraud.meta":"Private · Paydia",
+      "proj.fraud.desc":"Internal system for detecting suspicious transaction patterns from large volumes of payment data, based on configurable parameters such as transaction spikes and abnormal amounts. Built as an admin panel for reviewing and managing flagged transactions.",
+      "proj.biller.meta":"Private · Paydia",
+      "proj.biller.desc":"Broker service that connects a single upstream vendor to multiple client platforms, so each vendor integration is built once and reused across different apps and websites requesting top-up or billing services. Uses Redis for real-time notifications.",
+      "proj.sidsik.meta":"Ministry of Education (Vocational)",
+      "proj.sidsik.desc":"National platforms that collect data from vocational higher-education institutions across Indonesia and process it into Key Performance Indicator (IKU) scores, plus management and publication of industry-collaboration data.",
+      "proj.simonita.desc":"Real-time data monitoring and reporting system with scheduled jobs and RSync synchronisation.",
+      "proj.ngabei.meta":"Ticketing &amp; PPOB Platform",
+      "proj.ngabei.desc":"Web platform for plane/train ticketing and PPOB services (electricity, mobile credit top-ups, etc.), with a connector layer integrating third-party APIs.",
+      "proj.simaha.title":"SIMAHA &amp; PKM System",
+      "proj.simaha.desc":"Campus platforms for student fund/letter requests and creativity-program (PKM) proposal management, review scoring, and reporting.",
       "proj.more.label":"Other Projects",
       "contact.label":"Contact","contact.title":"Have a project or idea? Let's talk.",
-      "contact.lead":"Open to collaboration, job opportunities, or just a chat about information systems and backend development.",
+      "contact.lead":"Open to collaboration, job opportunities, or just a chat about payment systems and backend development.",
       "footer.rights":"All rights reserved.","footer.built":"Built with plain HTML, CSS &amp; JS."
     },
     id: {}
